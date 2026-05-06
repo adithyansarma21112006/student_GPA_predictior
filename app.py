@@ -21,4 +21,4 @@ if st.button("Predict GPA"):
 
     prediction = model.predict(sample_scaled)
 
-    st.write("Predicted GPA:", prediction[0])
+    st.success(f"Predicted GPA: {prediction[0]:.2f}")
