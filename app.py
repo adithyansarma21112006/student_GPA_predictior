@@ -21,4 +21,5 @@ if st.button("Predict GPA"):
 
     prediction = model.predict(sample_scaled)
 
-    st.success(f"Predicted GPA: {prediction[0]:.2f}")
+    gpa = max(0, min(4, prediction[0]))
+    st.success(f"Predicted GPA: {gpa:.2f}")
